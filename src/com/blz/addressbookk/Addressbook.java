@@ -1,9 +1,11 @@
 package com.blz.addressbookk;
 
+import java.util.Scanner;
+
 public class Addressbook {
 
-    public static void main(String[] args) {
+    public static <Addressbookk> void main(String[] args) {
         System.out.println("Welcome to Address book program");
-	// write your code here
+        
     }
 }
