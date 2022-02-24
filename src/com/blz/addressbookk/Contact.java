@@ -1,19 +1,19 @@
 package com.blz.addressbookk;
 
-public class contact {
+public class Contact {
 
     private String firstName;
     private String lastName;
     private String address;
     private String city;
     private String state;
-    private String zip;
-    private String phoneNumber;
+    private int zip;
+    private long phoneNumber;
     private String email;
 
     //parameterized constructor
-    public contact(String firstName, String lastName, String address, String city, String state, String zip,
-                   String phoneNumber, String email) {
+    public Contact(String firstName, String lastName, String address, String city, String state, int zip,
+                   long phoneNumber, String email) {
         setFirstName(firstName);
         setLastName(lastName);
         setAddress(address);
@@ -45,11 +45,11 @@ public class contact {
         this.state = state;
     }
 
-    public void setZip(String zip) {
+    public void setZip(int zip) {
         this.zip = zip;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -79,11 +79,11 @@ public class contact {
         return state;
     }
 
-    public String getZip() {
+    public int getZip() {
         return zip;
     }
 
-    public String getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -104,7 +104,11 @@ public class contact {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public void display() {
+    }
 }
+
 
 
 
