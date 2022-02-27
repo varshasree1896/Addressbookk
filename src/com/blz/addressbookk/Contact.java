@@ -2,35 +2,35 @@ package com.blz.addressbookk;
 
 public class Contact {
 
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String city;
-    private String state;
-    private int zip;
-    private long phoneNumber;
-    private String email;
+    private String firstName = " ";
+    private String lastName = " ";
+    private String address = " ";
+    private String city = " ";
+    private String state = " ";
+    private int zip = 0;
+    private long phoneNumber = 0;
+    private String email = " ";
 
     //parameterized constructor
-    public Contact(String firstName, String lastName, String address, String city, String state, int zip,
+     Contact(String firstName, String lastName, String address, String city, String state, int zip,
                    long phoneNumber, String email) {
-        setFirstName(firstName);
-        setLastName(lastName);
-        setAddress(address);
-        setCity(city);
-        setState(state);
-        setZip(zip);
-        setPhoneNumber(phoneNumber);
-        setEmail(email);
+         this.firstName = firstName;
+         this.lastName = lastName;
+         this.address = address;
+         this.city = city;
+         this.state = state;
+         this.zip = zip;
+         this.phoneNumber= phoneNumber;
+         this.email = email;
+
     }
 
     //standard setters method
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
     public void setLastName(String lastName) {
-        this.lastName = firstName;
+        this.lastName = lastName;
     }
 
     public void setAddress(String address) {
@@ -56,6 +56,7 @@ public class Contact {
     public void setEmail(String email) {
         this.email = email;
     }
+
     //standard getter methods
 
 
@@ -90,24 +91,23 @@ public class Contact {
     public String getEmail() {
         return email;
     }
-
-    @Override
     public String toString() {
-        return "contact{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip='" + zip + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        String contactDetails = firstName + lastName + address + city + state + zip + phoneNumber + email;
+        return contactDetails;
     }
 
-    public void display() {
+    void display() {
+             System.out.println("First name = " + firstName);
+             System.out.println("Last name = " + lastName);
+             System.out.println("Address = " + address);
+             System.out.println("City = " + city);
+             System.out.println("State = " + state);
+             System.out.println("Zip = " + zip);
+             System.out.println("Phone number = " + phoneNumber);
+             System.out.println("Email = " + email);
     }
 }
+
 
 
 
