@@ -91,10 +91,8 @@ public class Contact {
     public String getEmail() {
         return email;
     }
-    public String toString() {
-        String contactDetails = firstName + lastName + address + city + state + zip + phoneNumber + email;
-        return contactDetails;
-    }
+
+
 
     void display() {
              System.out.println("First name = " + firstName);
