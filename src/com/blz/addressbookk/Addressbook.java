@@ -13,6 +13,7 @@ import java.util.Scanner;
 
 public class Addressbook {
     private static ArrayList<Contact> list = new ArrayList<Contact>();
+
     /**
      * Call method to delete contact by searching firstname in contact list
      */
@@ -29,6 +30,7 @@ public class Addressbook {
             }
         }
     }
+
     /**
      * Call method to edit the contact by searching firstname
      */
@@ -96,6 +98,7 @@ public class Addressbook {
         list.add(person);
         person.display();
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         HashMap<String, Addressbook> addressBooks = new HashMap<>();
@@ -147,7 +150,7 @@ public class Addressbook {
                         book3.deleteContact();
                     }
                     break;
-                    default:
+                default:
                     System.out.println("Invalid input");
                     break;
             }
@@ -159,9 +162,7 @@ public class Addressbook {
         }
         System.out.println("The Program End");
     }
-
-
-    }
+}
 
 
 
