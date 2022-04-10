@@ -1,9 +1,13 @@
 package com.blz.addressbookk;
 
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 /**
@@ -99,70 +103,4 @@ public class Addressbook {
         person.display();
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        HashMap<String, Addressbook> addressBooks = new HashMap<>();
-        Addressbook book1 = new Addressbook();
-        Addressbook book2 = new Addressbook();
-        Addressbook book3 = new Addressbook();
-        addressBooks.put("AddressBook1", book1);
-        addressBooks.put("AddressBook2", book2);
-        addressBooks.put("AddressBook3", book3);
-        System.out.println("Choose Address Book");
-        System.out.println("1. AddressBook 1");
-        System.out.println("2. AddressBook 2");
-        System.out.println("3. AddressBook 3");
-        int chooseAddressBook = sc.nextInt();
-        System.out.println("Choose What to do in this Address Book");
-        while (chooseAddressBook >= 1) {
-            System.out.println(" ");
-            System.out.println("1. Add Contacts");
-            System.out.println("2. Edit Contacts");
-            System.out.println("3. Delete Contacts");
-            System.out.println("Enter Your Choice");
-            int choice = sc.nextInt();
-            switch (chooseAddressBook) {
-
-                case 1:
-                    if (choice == 1) {
-                        book1.AddContactsDetails();
-                    } else if (choice == 2) {
-                        book1.editContact();
-                    } else if (choice == 3) {
-                        book1.deleteContact();
-                    }
-                    break;
-                case 2:
-                    if (choice == 1) {
-                        book2.AddContactsDetails();
-                    } else if (choice == 2) {
-                        book2.editContact();
-                    } else if (choice == 3) {
-                        book2.deleteContact();
-                    }
-                    break;
-                case 3:
-                    if (choice == 1) {
-                        book3.AddContactsDetails();
-                    } else if (choice == 2) {
-                        book3.editContact();
-                    } else if (choice == 3) {
-                        book3.deleteContact();
-                    }
-                    break;
-                default:
-                    System.out.println("Invalid input");
-                    break;
-            }
-            System.out.println("1. AddressBook 1");
-            System.out.println("2. AddressBook 2");
-            System.out.println("3. AddressBook 3");
-            System.out.println("0. Exit");
-            chooseAddressBook = sc.nextInt();
-        }
-        System.out.println("The Program End");
-    }
 }
-
-
-
